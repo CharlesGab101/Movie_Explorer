@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ToDO -->
+    <script src="script.js"></script>
+    <div class="title_design_box">
+            <p class="title_font">Movie Explorer</p>
+            <!--Kai Dan films-->
+            <div class="options_tab">
+                    <input type="text" id="search-input" placeholder="Search for a movie..." oninput="show_movie_by_search()  ">
+                    <select id="genre-select" onchange="show_movie_by_criteria(this.value)">
+                        <option value="popularity.desc">Sort by</option>
+                        <option value="release_date.asc">Release Date (ASC)</option>
+                        <option value="release_date.desc">Release Date (DESC)</option>
+                        <option value="vote_average.asc">Rating (ASC)</option>
+                        <option value="vote_average.desc">Rating (DESC)</option>
+                    </select>
+            </div>
+    </div>
+    <div id="content" class="movies_selection"> </div>
+    <div class="change_page"> 
+             <button  class="page-button-previous" onclick="pagePrevious()">Previous</button>
+             <div id="page-number"></div>
+             <button  class="page-button-next" onclick="pageNext()">Next</button>
+    </div>
+</body>
+</html>
